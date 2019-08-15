@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        .container {
+        .app {
             width: 490px;
             height: 300px;
             background-color: #b6aeae;
@@ -21,14 +21,15 @@
         }
 
         .rank {
+            text-align: center;
+            width: 100px;
             line-height: 60px;
-            padding-left: 10px;
             font-size: 20px;
             font-weight: 600;
         }
 
         .nav-menu {
-            flex-grow: 1;
+            width: 340px;
         }
 
         .nav-menu ul {
@@ -66,13 +67,13 @@
 
     <div class="app">
         <div class="navbar">
-            <div class="rank">RANK LIST</div>
-            <div class="nav-menu" >
+            <div class="rank">排行榜</div>
+            <div class="nav-menu">
                 <ul @click="showHide">
-                    <li>Health</li>
-                    <li>Paper</li>
-                    <li>Maintain</li>
-                    <li>Luggage</li>
+                    <li>个护健康</li>
+                    <li>尿裤湿巾</li>
+                    <li>维修保养</li>
+                    <li>功能箱包</li>
                 </ul>
             </div>
         </div>
@@ -87,7 +88,6 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script>
         new Vue({
             el: ".app",
@@ -96,37 +96,17 @@
             },
             methods: {
                 showHide(e) {
-
                     let li = document.querySelectorAll("ul>li")
-                        if (e.target.nodeName == "LI") {
-                            li.forEach((el, index) => {
-                                if(e.target == li[index]) {
-                                    this.showAndHide =  index; 
-                                }
-                            })
-                        }
+                    if (e.target.nodeName == "LI") {
+                        li.forEach((el, index) => {
+                            if (e.target == li[index]) {
+                                this.showAndHide = index;
+                            }
+                        })
                     }
                 }
             }
-        )
-
-
-//jquery
-        new Vue({
-            el: ".app",
-            data: {
-                showAndHide: 0
-            },
-            methods: {
-                showHide(e) {
-                        let index = $("ul>li").index(e.target);
-                        this.showAndHide = index;
-                    }
-                }
-            })
-        
-
-
+        })
     </script>
 
 </body>
