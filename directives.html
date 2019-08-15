@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="app">
+        <button v-on:click="btnclick">Toggle</button>
+        <div class="box1" v-show="showBox">show</div>
+        <div class="box1" v-if="showBox">if</div><br>
+
+        <select name="name" v-model="color">
+            <option value="red">red</option>
+            <option value="blue">blue</option>
+            <option value="pink">pink</option>
+            <option value="other">other</option>
+        </select>
+
+        <ul>
+            <li v-if="'red' == color">red</li>
+            <li v-else-if ="'blue' == color">blue</li>
+            <li v-else-if = "'pink' == color">pink</li>
+            <li v-else>yellow</li>
+        </ul>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el: ".app",
+            data: {
+                showBox: true,
+                color:"red"
+
+            },
+            methods: {
+                btnclick() {
+                    this.showBox = !this.showBox;
+                }
+            }
+        })
+        
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 490px;
+            height: 300px;
+            background-color: #b6aeae;
+        }
+
+        .navbar {
+            height: 60px;
+            background-color: rgb(161, 90, 90);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .rank {
+            line-height: 60px;
+            padding-left: 10px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .nav-menu {
+            flex-grow: 1;
+        }
+
+        .nav-menu ul {
+            line-height: 60px;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            list-style: none;
+            justify-content: space-evenly;
+        }
+
+        .nav-menu ul li {
+            cursor: pointer;
+        }
+
+        .section {
+            height: 240px;
+            background-color: rgb(79, 134, 120);
+            position: relative;
+        }
+
+        .section>div {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            text-align: center;
+            line-height: 240px;
+            font-size: 40px;
+            font-weight: 400;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="app">
+        <div class="navbar">
+            <div class="rank">RANK LIST</div>
+            <div class="nav-menu" >
+                <ul @click="showHide">
+                    <li>Health</li>
+                    <li>Paper</li>
+                    <li>Maintain</li>
+                    <li>Luggage</li>
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+            <div class="ct-health" v-show="showAndHide == 0">Health</div>
+            <div class="ct-paper" v-show="showAndHide == 1">Paper</div>
+            <div class="ct-maintain" v-show="showAndHide == 2">Maintain</div>
+            <div class="ct-luggage" v-show="showAndHide == 3">Luggage</div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+        new Vue({
+            el: ".app",
+            data: {
+                showAndHide: 0,
+            },
+            methods: {
+                showHide(e) {
+
+                    let li = document.querySelectorAll("ul>li")
+                        if (e.target.nodeName == "LI") {
+                            li.forEach((el, index) => {
+                                if(e.target == li[index]) {
+                                    this.showAndHide =  index; 
+                                }
+                            })
+                        }
+                    }
+                }
+            }
+        )
+
+
+//jquery
+        new Vue({
+            el: ".app",
+            data: {
+                showAndHide: 0
+            },
+            methods: {
+                showHide(e) {
+                        let index = $("ul>li").index(e.target);
+                        this.showAndHide = index;
+                    }
+                }
+            })
+        
+
+
+    </script>
+
+</body>
+
+</html>

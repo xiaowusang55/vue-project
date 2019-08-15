@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="root">
+        <input type="text" v-model="msg">
+        <p>{{ $data.msg }}</p>
+    </div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+        let vue = new Vue({
+            //    el: "#root",
+            el: document.querySelector("#root"),
+            data: {
+                msg: "hello vue",
+                usr: {
+                    name: "xiaoming",
+                    age: 55
+                },
+            }
+        });
+
+        //    let vue = new Vue();
+        console.log(vue.$root._vnode.elm);
+        console.log(vue.$options.el);
+        console.log(vue.$root.$el.textContent);
+        console.log("==================");
+        
+        console.log(vue.$root.$data.msg);
+        console.log("==================");
+
+        console.log(vue.$options.render);
+        console.log(vue);
+
+        console.log(jQuery());
+    </script>
+
+</body>
+
+</html>
