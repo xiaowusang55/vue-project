@@ -90,15 +90,15 @@
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script>
 
-        new Vue({
+        let vm = new Vue({
             el: ".app",
             data: {
                 showAndHide: 0
             },
             methods: {
-                showHide(e) {
+                showHide: (e) => {
                         let index = $("ul>li").index(e.target);
-                        this.showAndHide = index;
+                        vm.showAndHide = index;
                     }
                 }
             })

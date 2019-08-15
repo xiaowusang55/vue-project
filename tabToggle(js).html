@@ -95,7 +95,7 @@
                 showAndHide: 0,
             },
             methods: {
-                showHide(e) {
+                showHide: function (e) {
                     let li = document.querySelectorAll("ul>li")
                     if (e.target.nodeName == "LI") {
                         li.forEach((el, index) => {
