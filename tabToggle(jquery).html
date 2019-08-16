@@ -67,7 +67,7 @@
     <div class="app">
         <div class="navbar">
             <div class="rank">RANK LIST</div>
-            <div class="nav-menu" >
+            <div class="nav-menu">
                 <ul @click="showHide">
                     <li>Health</li>
                     <li>Paper</li>
@@ -89,22 +89,18 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script>
-
-        new Vue({
+        let vm = new Vue({
             el: ".app",
             data: {
                 showAndHide: 0
             },
             methods: {
-                showHide: function(e) {
-                        let index = $("ul>li").index(e.target);
-                        this.showAndHide = index;
-                    }
+                showHide: (e) => {
+                    let index = $("ul>li").index(e.target);
+                    vm.showAndHide = index;
                 }
+            }
         })
-        
-
-
     </script>
 
 </body>
