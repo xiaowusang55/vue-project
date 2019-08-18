@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../fonts/font4/iconfont.css">
+    <link rel="stylesheet" href="../fonts/font3/iconfont.css">
+    <link rel="stylesheet" href="./taobao2.css">
+</head>
+
+<body>
+
+    <div class="app">
+        <div class="top-tab">
+            <ul>
+                <li><a @mouseover="tabChange" data-id="1" href="javascript:">公告</a></li>
+                <li><a @mouseover="tabChange" data-id="2" href="javascript:">规则</a></li>
+                <li><a @mouseover="tabChange" data-id="3" href="javascript:">论坛</a></li>
+                <li><a @mouseover="tabChange" data-id="4" href="javascript:">安全</a></li>
+                <li><a @mouseover="tabChange" data-id="5" href="javascript:">公益</a></li>
+            </ul>
+            <div class="drop">
+                <div class="tab-content" v-show="num == 1">
+                    <a href="javascript:">阿里巴巴的过去一年：创造就业4082万</a>
+                </div>
+                <div class="tab-content" v-show="num == 2">
+                    <a href="javascript:">故宫文具8月进驻天猫</a>
+                </div>
+                <div class="tab-content" v-show="num == 3">
+                    <a href="javascript:">速卖通在韩国大促卖疯</a>
+                </div>
+                <div class="tab-content" v-show="num == 4">
+                    <a href="javascript:">中差评功能升级</a>
+                </div>
+                <div class="tab-content" v-show="num == 5">
+                    <a href="javascript:">陌生人拼团上线</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="function">
+            <ul class="clearfix">
+                <li v-for="(item, index) in functions" :key="index">
+                    <a href="javascript:">
+                        <span :class="item.icons"></span>
+                        <span v-cloak class="text">{{item.text}}</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="logo">
+            <h3>
+                <span>阿里APP</span>
+                <span><a href="javascript:">更多</a></span>
+            </h3>
+            <ul>
+                <li v-for="(item, index) in logos" :key="index">
+                    <a href="javascript">
+                        <span :class="item.name"></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./taobao2.js"></script>
+
+</body>
+
+</html>

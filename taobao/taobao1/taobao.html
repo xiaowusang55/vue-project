@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../fonts/font2/iconfont.css">
+    <link rel="stylesheet" href="../fonts/font1/iconfont.css">
+    <link rel="stylesheet" href="../fonts/font0/iconfont.css">
+    <link rel="stylesheet" href="/taobao1/taobao.css">
+</head>
+
+<body>
+
+    <div class="app">
+        <div class="top">
+            <div class="top-wrap">
+                <div class="tbh-logo">
+                    <div class="logo">
+                        <h2>
+                            <a href="https://www.taobao.com"></a>
+                        </h2>
+                    </div>
+                </div>
+                <div class="tbh-search">
+                    <div class="search-wrap">
+                        <div class="search-bd">
+                            <div class="search-triggers">
+                                <ul class="ks-switchable-nav">
+                                    <li class="first">宝贝</li>
+                                    <li>天猫</li>
+                                    <li>店铺</li>
+                                </ul>
+                                <div class="search-tab-icon">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="search-panel">
+                                <form action="">
+                                    <div class="search-button">
+                                        <button class="btn-search">搜索</button>
+                                    </div>
+                                    <div class="search-combobox">
+                                        <input type="text" placeholder="小白鞋秋女 百搭">
+                                    </div>
+                                    <div class="search-imgsearch-panel">
+                                        <span class="iconfont icon-camera"></span>
+                                        <div class="file-input-wrapper">
+                                            <label for="J_IMGSeachUploadBtn"></label>
+                                            <input type="file" id="J_IMGSeachUploadBtn">
+                                        </div>
+                                    </div>
+                                    <span class="iconfont icon-search"></span>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="layer-inner clearfix">
+            <div class="top-wrap">
+                <div class="goods-inner">
+                    <h3>
+                        <img src="https://img.alicdn.com/tfs/TB1tqpnegMPMeJjy1XcXXXpppXa-148-48.png" alt="">
+                        <span class="iconfont icon-erweima"></span>
+                        <span>与品质生活不期而遇</span>
+                        <span @click="contentChange">换一换</span>
+                    </h3>
+                    <ul class="goods-list clearfix">
+                        <li v-for="(item, index) in goodslist" :key="index">
+                            <a href="javascript:">
+                                <div class="img-wrapper">
+                                    <img :src="item.url"
+                                        :alt="item.title">
+                                </div>
+                                <div class="info">
+                                    <h4 v-cloak>{{ item.title }}</h4>
+                                    <p v-cloak :title="item.describtion">{{ item.describtion }}</p>
+                                    <p class="extra">
+                                        <span class="iconfont icon-xiaolian" v-cloak></span>
+                                        {{ item.comment }}
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="shopping-inner">
+                    <h3>
+                        <a href="javascript:">
+                            <img src="https://img.alicdn.com/tfs/TB1UNX2bSFRMKJjy0FhXXX.xpXa-112-46.png" alt="时髦精必备女神气质款毛衫套装">
+                        </a>
+                        <span>献给聪明可爱的你</span>
+                        <span>更多</span>
+                    </h3>
+                    <ul class="shopping-list clearfix">
+                        <li v-for="(item, index) in shoppinglist" :key="index">
+                            <a href="javascript:">
+                                <div class="img-wrapper">
+                                    <img :src="item.url"
+                                        :alt="item.title">
+                                </div>
+                                <div class="info">
+                                    <p class="subtitle">
+                                        <span v-cloak class="iconfont icon-quotation"></span>
+                                        {{ item.title }}
+                                    </p>
+                                </div>
+                                <div class="extra">
+                                    <div class="wrapper">
+                                        <img :src="item.usrImg"
+                                            :alt="item.usrName">
+                                    </div>
+                                    <p v-cloak class="name">{{ item.usrName }}</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./tao.js"></script>
+
+</body>
+
+</html>

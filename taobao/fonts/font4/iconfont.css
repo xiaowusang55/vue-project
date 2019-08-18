@@ -1,0 +1,21 @@
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1566104780123'); /* IE9 */
+  src: url('iconfont.eot?t=1566104780123#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAPMAAsAAAAAB8QAAAN+AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCCcAqDUIMqATYCJAMICwYABCAFhG0HMBvQBhHVmyfJfiyUm17MCcqQ6q0JAv49a16SYpOV0T1ycSJ7e7K+5LZnfwn1zc1H16gIxZKcB/+X73iBnV6avwLgfw6XNsXnB8pxzkW9AOOtgY01KbGwAzkwP75h7MqLOA4BqASTiKhRq0EZRhSMcQIQfXp274gxJUGpiRcYEehLliqIeegwSjOlq8Bc/+fFR9KFESR0MkZSk241u2B6YzSD5An2CbRxEVDHUwFsFchAIqCAKCvVNEIOPYnIqIpHIRzWFS/gjdFudymr/cMDAUKPEesIQCCknBPVpp1qlgSAwrl3rgVu9/ow0LlGO7g36utotVbINlulk8VSLt29236iEBOtB85ctqqdIs13L57ad5cWfhMs+09fsmQ5aUdtV84e3BgyavPpCafMZyaebblqX1nFUlvK2jNqReXp43HbJ/S9a/WOqGmzecsTrWVZi7Z5aqjg3bcmBFeWl4Vvu1thtfr4aIHLvBZv1jShCpC0LTa2eKctINe/Zkl8/h2bKPdc5PvS4rnY8m305/7SokVSv49Sf+LqLz73EylEf0S/Z5c+dNQ7Rmimz/brJjXiJTcjStXr9s+qKYKXThFqmTv0VUioifTYK6c2y302JW9Ksf1ftK7atCBraN+aXQYPrvppVsoyk2qfb3xtZu3ao0PmfJR+f7jaGN+yrPBmC73NaTvjEm/8yJhVYs4w9/6w4FqpR9a0xmGWLUPiO9DRoFW1SuuU5Tlu1AUn3cg5GXNMUWYRtrlHXOmHl+O+hD3P7Jpv1ncNbNvmQlSdhRP2uroewASAfZL8Xx73C3+Hq18Nhe1dCr8ZNQWA++P+XfVN9kkK7XRgvFGtgB9GbVmhqHRDKikytTQgsRbdi8hTUQE72ODOk746L4hVAiOnQpAwEAQyRiKRCjYRdGhkgh4jJaCSQO3VGh4MQkYoDkA8UwEIXNkLEs6cBRlXriEV7GPQ4c1n0OMqZFCpEB5bakRLYnXVFd6QKPxpjXKxJTcXxN8wvw+vSbqPe0HLaqeubrP+CRd0jBnlM/dmTKxy0ghOw3EIZZUN0erFLA9Nw2VvqqOclaO6whsSEf7EGuVit7a53PdvmN+H15qyCvkLWtbuiY6atgVy4lytyq7llfKZe8yYYJWTGIEKh+kRIpcP2hCtZunhygMNqsZtOfX8vPPp1gEqhlASZrCMfoiXYImrCgAA') format('woff2'),
+  url('iconfont.woff?t=1566104780123') format('woff'),
+  url('iconfont.ttf?t=1566104780123') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1566104780123#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-taobao:before {
+  content: "\e608";
+}
+
