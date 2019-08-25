@@ -1,0 +1,22 @@
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.topnav {
+    height: 50px;
+    background-color: rgb(173, 98, 98);
+}
+
+.topnav ul {
+    display: flex;
+    justify-content: space-around;
+}
+.section {
+    background-color: rgb(153, 53, 53);
+}
+
+.section ul {
+    display: flex;
+    justify-content: left;
+}
