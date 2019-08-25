@@ -21,7 +21,7 @@ export default {
 </script>
 
 <style>
-h1, p {
+h1,h2, p {
     padding: 0;
     margin: 0;
 }

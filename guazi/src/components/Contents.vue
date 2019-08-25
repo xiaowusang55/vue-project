@@ -1,64 +1,63 @@
 <template>
   <div class="index-carlist-bg">
-    <div class="index-carlist-title">
-      热卖车型
-    </div>
+    <div class="index-carlist-title">热卖车型</div>
     <ul class="index-carlist">
-        <li>
-            <span>猜您喜欢</span>
-        </li>
-        <li>
-            <span>严选车</span>
-        </li>
-        <li>
-            <span>最新上架</span>
-        </li>
-        <li>
-            <span>降价急售</span>
-        </li>
-        <li>
-            <span>准新车</span>
-        </li>
-        <li>
-            <span>练手车</span>
-        </li>
-        <li>
-            <span>SUV</span>
-        </li>
+      <!-- <router-link
+        v-for="(item, index) in carlistIndex"
+        :key="index"
+        :to="'/hotsales/gyLike'"
+      > -->
+      <router-link to="/hotsales/gyLike">猜您喜欢</router-link>
+      <router-link to="/hotsales/stSelect">严选车</router-link>
+      <router-link to="/hotsales/newArrival">最新上架</router-link>
+      <router-link to="/hotsales/bigSale">降价急售</router-link>
+      <router-link to="/hotsales/amtNew">准新车</router-link>
+      <router-link to="/hotsales/trnCar">练手车</router-link>
+      <router-link to="/hotsales/suv">SUV</router-link>
     </ul>
 
-    <div class="index-carlist-box">
-      <ul class="carlist clearfix">
-        <li>
-          <a href="javascript">
-            <img src="https://image1.guazistatic.com/qn190825195858def6b4c232df979753478c8222371e94.jpg?imageView2/1/w/287/h/192/q/88" alt="">
-            <div class="car-info">
-              <h2 class="t">标致2008 2014款 1.6L 自动时尚版</h2>
-              <div class="t-i">
-                2015年
-                <span></span>
-                4.0万公里
-                <span></span>
-                到店服务
-              </div>
-              <div class="t-price">
-                <p>
-                  6.00
-                  <span>万</span>
-                </p>
-                <em class="line-through">13.20万</em>
-              </div>
-            </div>
-          </a>
-        </li>
-      </ul>
-    </div>
-    
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-export default {};
+
+export default {
+  data() {
+    return {
+      carlistIndex: [
+        {
+          url: "gyLike",
+          title: '猜您喜欢'
+        },
+        {
+          url: "stSelect",
+          title: '严选车'
+        },
+        {
+          url: "newArrival",
+          title: '最新上架'
+        },
+        {
+          url: "bigSale",
+          title: '降价急售'
+        },
+        {
+          url: "amtNew",
+          title: '准新车'
+        },
+        {
+          url: "trnCar",
+          title: '练手车'
+        },
+        {
+          url: "suv",
+          title: 'SUV'
+        }
+      ]
+    };
+  }
+};
 </script>
 
 <style scoped>
@@ -98,5 +97,4 @@ export default {};
 .index-carlist span:hover {
   color: #000;
 }
-
 </style>

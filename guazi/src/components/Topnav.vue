@@ -14,19 +14,39 @@
         热线电话  400-069-6530 
       </div>
       <div class="nav-list">
-        <a href="javascript:">毛豆新车</a>
-        <a href="javascript:">瓜子金融</a>
-        <a href="javascript:">瓜子服务</a>
-        <a href="javascript:">我要卖车</a>
-        <a href="javascript:">我要买车</a>
-        <a href="javascript:">首页</a>
+        <a href="javascript:" v-for="(title, index) in titles" :key='index'>{{ title.name }}</a>
       </div>    
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      titles: [
+        {
+          name: '毛豆新车'
+        },
+        {
+          name: '瓜子金融'
+        },
+        {
+          name: '瓜子服务'
+        },
+        {
+          name: '我要卖车'
+        },
+        {
+          name: '我要买车'
+        },
+        {
+          name: '首页'
+        },
+      ]
+    }
+  },
+};
 </script>
 
 <style scoped>
