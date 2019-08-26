@@ -2,18 +2,7 @@
   <div class="index-carlist-bg">
     <div class="index-carlist-title">热卖车型</div>
     <ul class="index-carlist">
-      <!-- <router-link
-        v-for="(item, index) in carlistIndex"
-        :key="index"
-        :to="'/hotsales/gyLike'"
-      > -->
-      <router-link to="/hotsales/gyLike">猜您喜欢</router-link>
-      <router-link to="/hotsales/stSelect">严选车</router-link>
-      <router-link to="/hotsales/newArrival">最新上架</router-link>
-      <router-link to="/hotsales/bigSale">降价急售</router-link>
-      <router-link to="/hotsales/amtNew">准新车</router-link>
-      <router-link to="/hotsales/trnCar">练手车</router-link>
-      <router-link to="/hotsales/suv">SUV</router-link>
+      <router-link v-for="(item, index) in carlistIndex" :key="index" :to="item.url" tag="li" event="mouseover">{{ item.title }}</router-link>
     </ul>
 
     <router-view></router-view>
@@ -27,31 +16,31 @@ export default {
     return {
       carlistIndex: [
         {
-          url: "gyLike",
+          url: "/hotsales/gyLike",
           title: '猜您喜欢'
         },
         {
-          url: "stSelect",
+          url: "/hotsales/stSelect",
           title: '严选车'
         },
         {
-          url: "newArrival",
+          url: "/hotsales/newArrival",
           title: '最新上架'
         },
         {
-          url: "bigSale",
+          url: "/hotsales/bigSale",
           title: '降价急售'
         },
         {
-          url: "amtNew",
+          url: "/hotsales/amtNew",
           title: '准新车'
         },
         {
-          url: "trnCar",
+          url: "/hotsales/trnCar",
           title: '练手车'
         },
         {
-          url: "suv",
+          url: "/hotsales/suv",
           title: 'SUV'
         }
       ]
@@ -95,6 +84,9 @@ export default {
   line-height: 16px;
 }
 .index-carlist span:hover {
+  color: #000;
+}
+.router-link-exact-active.router-link-active {
   color: #000;
 }
 </style>

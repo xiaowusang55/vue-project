@@ -1,12 +1,12 @@
 <template>
-    <carlist></carlist>
+    <carlist1></carlist1>
 </template>
 
 <script>
-import carlist from '../components/Carlist'
+import carlist1 from '../components/Carlist1'
 export default {
   components: {
-    carlist
+    carlist1
   }
 };
 </script>
