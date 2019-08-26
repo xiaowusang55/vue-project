@@ -1,13 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import contents from '../components/Contents.vue';
-// import contents1 from '../components/Contents1.vue';
-// import contents2 from '../components/Contents2.vue';
-// import contents3 from '../components/Contents3.vue';
-// import contents4 from '../components/Contents4.vue';
-// import contents5 from '../components/Contents5.vue';
-// import contents6 from '../components/Contents6.vue';
-// import contents7 from '../components/Contents7.vue';
+
 const contents1 = () => import('../components/Contents1.vue');
 const contents2 = () => import('../components/Contents2.vue');
 const contents3 = () => import('../components/Contents3.vue');
@@ -21,10 +15,9 @@ Vue.use(Router)
 export default new Router({
   mode: 'history',
   routes: [
-    {
-      path: '/',
-      redirect: '/hotsales',
-      
+    { 
+      path: '',
+      redirect: '/hotsales/gyLike'
     },
     {
       path: '/hotsales/gyLike',
@@ -54,7 +47,6 @@ export default new Router({
       path: '/hotsales/suv',
       component: contents7
     },
-
   ]
 })
 
