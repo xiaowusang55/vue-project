@@ -7,5 +7,8 @@ export default {
         finace: 'Finace',
         newCar: 'NewCars',
         lang: 'Language',
+        langC: 'Chinese',
+        langE: 'English',
+        langJ: 'Japanese',
     }
 }
