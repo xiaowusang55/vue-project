@@ -7,6 +7,14 @@
       <div class="city">
         <p>深圳<i></i></p>
       </div>
+      <div class="language" @mouseover="overShow" @mouseout="showOver">
+        <div>{{ $t('navBar.lang') }}</div>
+        <div class="lang-toggle" v-show="condition" @click="changeLang">
+          <!-- <p data-lang="zh">Chinese</p> -->
+          <p data-lang="en">English</p>
+          <p data-lang="jp">Japanese</p>
+        </div>
+      </div>
       <div class="uc">
         <a class="my-uc" href="javascript:">登录</a>
       </div>
@@ -14,7 +22,7 @@
         热线电话  400-069-6530 
       </div>
       <div class="nav-list">
-        <a href="javascript:" v-for="(title, index) in titles" :key='index'>{{ title.name }}</a>
+        <a href="javascript:" v-for="(title, index) in titles" :key='index'>{{ $t(title.name) }}</a>
       </div>    
     </div>
   </div>
@@ -26,26 +34,42 @@ export default {
     return {
       titles: [
         {
-          name: '毛豆新车'
+          name: 'navBar.newCar'
         },
         {
-          name: '瓜子金融'
+          name: 'navBar.finace'
         },
         {
-          name: '瓜子服务'
+          name: 'navBar.service'
         },
         {
-          name: '我要卖车'
+          name: 'navBar.seller'
         },
         {
-          name: '我要买车'
+          name: 'navBar.buyer'
         },
         {
-          name: '首页'
-        },
-      ]
+          name: 'navBar.home'
+        }
+      ],
+      condition: false
     }
   },
+  methods: {
+    overShow(e) {
+      this.condition = true
+    },
+    showOver() {
+      this.condition = false
+    },
+    changeLang(e) {
+      if(e.target.nodeName == "P") {
+        this.$i18n.locale = e.target.dataset.lang
+        console.log(this.$i18n.locale);
+      }
+    }
+  },
+  
 };
 </script>
 
@@ -60,6 +84,7 @@ export default {
   width: 1200px;
   height: 55px;
   margin: 0 auto;
+  position: relative;
 }
 .header h1 {
   float: left;
@@ -146,5 +171,22 @@ export default {
 .nav-list a:hover {
     color: #3db46e;
     border-bottom: 2px solid #3db46e;
+}
+
+.language {
+  position: absolute;
+  top: 34px;
+  left: 192px;
+  font-size: 12px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.language .lang-toggle {
+  line-height: 20px;
+  padding-top: 5px;
+}
+.lang-toggle p:hover {
+  color: #3db46e;
 }
 </style>
