@@ -174,12 +174,19 @@ export default {
 }
 
 .language {
+  width: 60px;
   position: absolute;
-  top: 26px;
+  top: 23px;
   left: 192px;
   font-size: 12px;
   height: 24px;
   cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 24px;
+}
+.language:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
 }
 
 .language .lang-toggle {
@@ -188,5 +195,6 @@ export default {
 }
 .lang-toggle p:hover {
   color: #3db46e;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .3);
 }
 </style>
