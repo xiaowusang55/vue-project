@@ -10,9 +10,9 @@
       <div class="language" @mouseover="overShow" @mouseout="showOver">
         <div>{{ $t('navBar.lang') }}</div>
         <div class="lang-toggle" v-show="condition" @click="changeLang">
-          <!-- <p data-lang="zh">Chinese</p> -->
-          <p data-lang="en">English</p>
-          <p data-lang="jp">Japanese</p>
+          <p data-lang="zh">中文</p>
+          <p data-lang="en">英文</p>
+          <p data-lang="jp">日文</p>
         </div>
       </div>
       <div class="uc">

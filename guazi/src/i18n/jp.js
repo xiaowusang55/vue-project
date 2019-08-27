@@ -6,6 +6,6 @@ export default {
         service: 'サービス',
         finace: '金融',
         newCar: '新型',
-        lang: '日本語'
+        lang: '語言'
     }
 }

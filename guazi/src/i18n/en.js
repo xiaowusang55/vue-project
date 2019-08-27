@@ -6,6 +6,6 @@ export default {
         service: 'Service',
         finace: 'Finace',
         newCar: 'NewCars',
-        lang: 'English'
+        lang: 'Language',
     }
 }
